@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Cell } from './cell';
+import { Row } from './row';
 import { generateBoard } from './utils/generateBoard'
 import { printBoard } from './utils/printBoard';
 
@@ -15,19 +16,9 @@ export const Board: React.FC = () => {
                 display: 'inline-block'
             }}
         >
-            {board.map((row) => {
+            {board.map((row, i) => {
                 return (
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            width: '100%'
-                        }}
-                    >
-                        {row.map((piece) => (
-                            <Cell piece={piece} />
-                        ))}
-                    </div>
+                    <Row key={i} rowNum={i} row={row} />
                 )
             })}
         </div>

@@ -1,4 +1,4 @@
-import { PieceIdToPieceName, PieceName, Pieces } from "../types/board";
+import { PieceIdToPieceName, Pieces } from "../types/board";
 
 export const pieceIdToPieceName: PieceIdToPieceName = {
     [Pieces.P]: 'P',
